@@ -56,8 +56,7 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
     for(int i = x0;i< x1;i++){
         for(int j = y0;j< y1;j++){
             for(int k = z0;k< z1;k++){
-                v[i][j][k].isOn = false;
-
+                cutVoxel(i,j,k);
             }
         }
     }
@@ -96,11 +95,49 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
 }
 
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+    int xTemp, yTemp, zTemp;
+    xTemp = xcenter - rx;
+    yTemp = ycenter - ry;
+    zTemp = zcenter - rz;
 
+    for(int i=xTemp; i<rx; i++){
+        for(int j=yTemp; j<ry; j++){
+            for(int k=zTemp; k<rz; k++){
+                if(i-xcenter<=rx){
+                    if(j-ycenter<=ry){
+                        if(k-zcenter<=rz){
+                            putVoxel(i,j,k);
+                            v[i][j][k].r = r;
+                            v[i][j][k].g = g;
+                            v[i][j][k].b = b;
+                            v[i][j][k].a = a;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+    int xTemp, yTemp, zTemp;
+    xTemp = xcenter - rx;
+    yTemp = ycenter - ry;
+    zTemp = zcenter - rz;
 
+    for(int i=xTemp; i<rx; i++){
+        for(int j=yTemp; j<ry; j++){
+            for(int k=zTemp; k<rz; k++){
+                if(i-xcenter<=rx){
+                    if(j-ycenter<=ry){
+                        if(k-zcenter<=rz){
+                            cutVoxel(i,j,k);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 void Sculptor::writeOFF(char *filename){

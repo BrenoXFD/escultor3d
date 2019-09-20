@@ -2,18 +2,16 @@
 #define SCULPTOR_H
 
 struct Voxel {
-  float r,g,b; // Colors
+  float r,g,b;
   float a;
-// Transparency
-  bool isOn; // Included or not
+  bool isOn;
 };
 
 class Sculptor {
 protected:
   Voxel ***v;
-  // 3D matrix
-  int nx,ny,nz; // Dimensions
-  float r,g,b,a; // Current drawing color
+  int nx,ny,nz;
+  float r,g,b,a;
 public:
   Sculptor(int nx, int ny, int nz);
   ~Sculptor();
@@ -29,4 +27,4 @@ public:
   void writeOFF(char* filename);
 };
 
-#endif // SCULPTOR_H
+#endif
