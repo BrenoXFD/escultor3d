@@ -12,7 +12,15 @@ Sculptor::Sculptor(int nx, int ny, int nz){
 }
 
 Sculptor::~Sculptor(){
-
+    for(int i=0; i<nx; i++){
+        for(int j=0; j<ny; j++){
+            delete[] v[i][j];
+        }
+    }
+    for(int i=0; i<nx; i++){
+        delete[] v[i];
+    }
+    delete[] v;
 }
 
 void Sculptor::setColor(float r, float g, float b, float alpha){
@@ -34,7 +42,7 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
     for(int i = x0;i< x1;i++){
         for(int j = y0;j< y1;j++){
             for(int k = z0;k< z1;k++){
-                v[i][j][k].isOn = true;
+                putVoxel(i,j,k);
                 v[i][j][k].r = r;
                 v[i][j][k].g = g;
                 v[i][j][k].b = b;
@@ -62,7 +70,7 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
             for(int k=0; k<ny; k++){
                 cal = sqrt(pow(i - xcenter,2) - pow(j - ycenter,2) - pow(k - zcenter,2));
                 if( cal <= radius){
-                    v[i][j][k].isOn = true;
+                    putVoxel(i,j,k);
                     v[i][j][k].r = r;
                     v[i][j][k].g = g;
                     v[i][j][k].b = b;
@@ -80,7 +88,7 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
             for(int k=0; k<ny; k++){
                 cal = sqrt(pow(i - xcenter,2) - pow(j - ycenter,2) - pow(k - zcenter,2));
                 if( cal <= radius){
-                    v[i][j][k].isOn = false;
+                    cutVoxel(i,j,k);
                 }
             }
         }
