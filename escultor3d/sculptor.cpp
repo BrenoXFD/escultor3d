@@ -1,4 +1,5 @@
 #include "sculptor.h"
+#include <iostream>
 #include <cmath>
 
 Sculptor::Sculptor(int nx, int ny, int nz){
@@ -32,6 +33,10 @@ void Sculptor::setColor(float r, float g, float b, float alpha){
 
 void Sculptor::putVoxel(int x, int y, int z){
     v[x][y][z].isOn = true;
+    v[x][y][z].r = r;
+    v[x][y][z].g = g;
+    v[x][y][z].b = b;
+    v[x][y][z].a = a;
 }
 
 void Sculptor::cutVoxel(int x, int y, int z){
@@ -43,10 +48,6 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
         for(int j = y0;j< y1;j++){
             for(int k = z0;k< z1;k++){
                 putVoxel(i,j,k);
-                v[i][j][k].r = r;
-                v[i][j][k].g = g;
-                v[i][j][k].b = b;
-                v[i][j][k].a = a;
             }
          }
      }
@@ -70,10 +71,6 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
                 cal = sqrt(pow(i - xcenter,2) - pow(j - ycenter,2) - pow(k - zcenter,2));
                 if( cal <= radius){
                     putVoxel(i,j,k);
-                    v[i][j][k].r = r;
-                    v[i][j][k].g = g;
-                    v[i][j][k].b = b;
-                    v[i][j][k].a = a;
                 }
             }
         }
@@ -107,10 +104,6 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
                     if(j-ycenter<=ry){
                         if(k-zcenter<=rz){
                             putVoxel(i,j,k);
-                            v[i][j][k].r = r;
-                            v[i][j][k].g = g;
-                            v[i][j][k].b = b;
-                            v[i][j][k].a = a;
                         }
                     }
                 }
