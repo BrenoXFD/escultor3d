@@ -19,5 +19,5 @@ int main(){
  g.cutEllipsoid(20/2,20/2,20/2,10,13,15);
 
  g.writeOFF(c);
-
+ return 0;
 }
