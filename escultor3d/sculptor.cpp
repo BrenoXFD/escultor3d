@@ -143,49 +143,25 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 
 void Sculptor::writeOFF(char *filename){
 
-    char arq[nx][ny][nz];
 
-    for(int i = 0; i < nx; i++){
-            for(int j = 0; j < ny; j++){
-                for(int k = 0; k < nz; k++){
-                    arq[i][j][k] = 0;
-                }
-            }
-        }
 
-     ofstream outfile(filename);
+
+
+     ofstream outfile;
+     outfile.open(filename);
+
+     if(outfile.is_open()==true){
+         cout<<"ok"<<endl;
+     }
 
      outfile<<"OFF"<<endl;
 
      int nv = 0;
 
-     bool checx,checy,checz;
-     // checa as posiçoes laterais
-     for(int i = 1; i < nx-1; i++){
-             for(int j = 1; j < ny-1; j++){
-                 for(int k = 1; k < nz-1; k++){
-                     checx = false;checy = false;checz=false;
-                     //if the point is valid, check if it is surrounded
-                     if(v[i-1][j][k].isOn && v[i+1][j][k].isOn){
-                         checx = true;
-                     }
-                     if(v[i][j-1][k].isOn && v[i][j+1][k].isOn){
-                         checy = true;
-                     }
-                     if(v[i][j][k-1].isOn && v[i][j][k+1].isOn){
-                        checz = true;
-                     }
-                     if(checx && checy && checz){
-                         arq[i][j][k] = 1;
-                     }
-
-                 }
-             }
-         }
      for(int i = 0; i < nx; i++){
          for(int j = 0; j < ny; j++){
              for(int k = 0; k < nz; k++){
-                 if (v[i][j][k].isOn && arq[i][j][k] == 0){
+                 if (v[i][j][k].isOn){
                      nv++;
                  }
              }
@@ -197,7 +173,7 @@ void Sculptor::writeOFF(char *filename){
  for(int k=0;k<nz; k++){
          for(int j=0;j<ny;j++){
              for (int i=0;i<nx;i++) {
-                 if(v[i][j][k].isOn && arq[i][j][k] == 0){
+                 if(v[i][j][k].isOn ){
                          outfile<<-0.5+i<<" "<<0.5+j<<" "<<-0.5+k<<endl;
                          outfile<<-0.5+i<<" "<<-0.5+j<<" "<<-0.5+k<<endl;
                          outfile<<0.5+i<<" "<<-0.5+j<<" "<<-0.5+k<<endl;
@@ -217,7 +193,7 @@ void Sculptor::writeOFF(char *filename){
       for(int k=0;k<nz; k++){
            for(int j=0;j<ny;j++){
                for (int i=0;i<nx;i++) {
-                   if(v[i][j][k].isOn && arq[i][j][k] == 0){
+                   if(v[i][j][k].isOn){
                        outfile<<"4 "<<0+nf*8<<" "<<3+nf*8<<" "<<2+nf*8<<" "<<1+nf*8<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl
                            <<"4 "<<4+nf*8<<" "<<5+nf*8<<" "<<6+nf*8<<" "<<7+nf*8<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl
                            <<"4 "<<0+nf*8<<" "<<1+nf*8<<" "<<5+nf*8<<" "<<4+nf*8<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl
