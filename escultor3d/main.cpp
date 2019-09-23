@@ -1,10 +1,4 @@
 #include <iostream>
-#include "sculptor.h"
-
-using namespace std;
-
-int main(){
-    #include <iostream>
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
