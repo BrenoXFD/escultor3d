@@ -13,10 +13,10 @@ int main(){
  g.setColor(1,0.2,0.4,1);
  g.putSphere(20/2,20/2,20/2,10);
  g.putBox(0,1,0,1,0,1);
- g.putEllipsoid(20/2,20/2,20/2,10,13,15);
+ g.putEllipsoid(5,5,5,1,1,1);
  g.cutSphere(20/2,20/2,20/2,10);
  g.cutBox(0,1,0,1,0,1);
- g.cutEllipsoid(20/2,20/2,20/2,10,13,15);
+ g.cutEllipsoid(5,5,5,1,1,1);
 
  g.writeOFF(c);
  return 0;
