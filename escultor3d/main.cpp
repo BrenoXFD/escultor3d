@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
  Sculptor g(20,20,20);
- char *c = "texto.txt";
+
 
  g.setColor(1,0.2,0.4,1);
  g.putSphere(20/2,20/2,20/2,10);
@@ -18,6 +18,6 @@ int main(){
  g.cutBox(0,1,0,1,0,1);
  g.cutEllipsoid(5,5,5,1,1,1);
 
- g.writeOFF(c);
+ g.writeOFF("C:/alo/test.txt");
  return 0;
 }
