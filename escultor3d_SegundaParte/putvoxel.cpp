@@ -1,6 +1,6 @@
 #include "putvoxel.h"
 
-PutVoxel::PutVoxel(int x ,int y,int z,int r,int g,int b ,int a)
+PutVoxel::PutVoxel(int x ,int y,int z,float r,float g,float b ,float a)
 {
 this->x = x;
 this->y = y;

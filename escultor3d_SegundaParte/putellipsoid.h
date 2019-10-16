@@ -7,9 +7,9 @@ class PutEllipsoid:public FiguraGeometrica
 {
 protected:
     int xc,yc,zc,rx,ry,rz; // variaveis da elipse
-    int r,g,b,a; // cor e transparencia
+    float r,g,b,a; // cor e transparencia
 public:
-    PutEllipsoid(int x,int y,int z,int raix ,int raiy,int raiz,int r,int g,int b,int a);
+    PutEllipsoid(int x,int y,int z,int raix ,int raiy,int raiz,float r,float g,float b,float a);
     void draw(Sculptor &t);
 };
 

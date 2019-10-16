@@ -1,6 +1,6 @@
 #include "putellipsoid.h"
 
-PutEllipsoid::PutEllipsoid(int x,int y,int z,int raix ,int raiy,int raiz,int r,int g,int b,int a)
+PutEllipsoid::PutEllipsoid(int x,int y,int z,int raix ,int raiy,int raiz,float r,float g,float b,float a)
 {
 xc = x;
 yc = y;

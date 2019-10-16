@@ -7,9 +7,9 @@ class PutSphere:public FiguraGeometrica
 {
 protected:
     int xc,yc,zc,raio;
-    int r,g,b,a;
+    float r,g,b,a;
 public:
-    PutSphere(int x,int y,int z ,int raiom,int r,int g ,int b ,int a);
+    PutSphere(int x,int y,int z ,int raiom,float r,float g ,float b ,float a);
     void draw(Sculptor &t);
 };
 

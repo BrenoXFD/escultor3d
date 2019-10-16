@@ -7,9 +7,9 @@ class PutVoxel: public FiguraGeometrica
 {
 protected:
     int x,y,z;
-    int r,g,b,a;
+    float r,g,b,a;
 public:
-    PutVoxel(int x ,int y,int z,int r,int g,int b ,int a);
+    PutVoxel(int x ,int y,int z,float r,float g,float b ,float a);
     void draw(Sculptor &t);
 };
 

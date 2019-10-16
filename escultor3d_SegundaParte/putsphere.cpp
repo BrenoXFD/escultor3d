@@ -1,6 +1,6 @@
 #include "putsphere.h"
 
-PutSphere::PutSphere(int x,int y,int z ,int raio ,int r,int g ,int b ,int a)
+PutSphere::PutSphere(int x,int y,int z ,int raio ,float r,float g ,float b ,float a)
 {
 xc = x;
 yc = y;
