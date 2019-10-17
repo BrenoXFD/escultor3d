@@ -17,17 +17,12 @@
 
 using namespace std;
 
-
-
 int main(){
     string String,comando;
     ifstream arq;
     FiguraGeometrica *v;
     Sculptor *t;
-    arq.open("C:corno.txt");
-
-
-
+    //arq.open("C:instrucoes.txt");
 
     while(arq.is_open()){
         getline(arq,String);
@@ -104,9 +99,7 @@ int main(){
 
     }
 
-
-
-    t->writeOFF("C:teste.off");
-   // g.writeOFF("C:/Users/UFRNLAB/Desktop/escultor3d/escultor3d/teste.off");
+    //t->writeOFF("C:teste.off");
+    //g.writeOFF("C:/Users/UFRNLAB/Desktop/escultor3d/escultor3d/teste.off");
     return 0;
 }
