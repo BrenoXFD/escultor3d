@@ -24,6 +24,7 @@
 #include <QtGui/QStatusBar>
 #include <QtGui/QToolBar>
 #include <QtGui/QWidget>
+#include "paleta.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -38,12 +39,11 @@ public:
     QAction *actionSave;
     QAction *actionOpen;
     QWidget *centralWidget;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLCDNumber *lcdNumber;
     QLCDNumber *lcdNumber_3;
     QSlider *horizontalSliderRed;
-    QSlider *horizontalSliderBlue;
     QLCDNumber *lcdNumber_2;
     QSlider *horizontalSliderGreen;
     QLabel *labelBlue;
@@ -52,7 +52,8 @@ public:
     QSlider *horizontalSliderAlpha;
     QLCDNumber *lcdNumber_4;
     QLabel *labelRed;
-    QWidget *widget1;
+    QSlider *horizontalSliderBlue;
+    Paleta *widget;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -104,86 +105,107 @@ public:
         actionOpen->setIcon(icon7);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(390, 160, 251, 128));
-        gridLayout = new QGridLayout(widget);
+        layoutWidget = new QWidget(centralWidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(410, 160, 251, 218));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        lcdNumber = new QLCDNumber(widget);
+        lcdNumber = new QLCDNumber(layoutWidget);
         lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
+        lcdNumber->setFrameShape(QFrame::Panel);
+        lcdNumber->setFrameShadow(QFrame::Sunken);
+        lcdNumber->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber->setProperty("intValue", QVariant(48));
 
         gridLayout->addWidget(lcdNumber, 1, 2, 1, 1);
 
-        lcdNumber_3 = new QLCDNumber(widget);
+        lcdNumber_3 = new QLCDNumber(layoutWidget);
         lcdNumber_3->setObjectName(QString::fromUtf8("lcdNumber_3"));
+        lcdNumber_3->setFrameShape(QFrame::Panel);
+        lcdNumber_3->setFrameShadow(QFrame::Sunken);
+        lcdNumber_3->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber_3->setProperty("intValue", QVariant(48));
 
         gridLayout->addWidget(lcdNumber_3, 3, 2, 1, 1);
 
-        horizontalSliderRed = new QSlider(widget);
+        horizontalSliderRed = new QSlider(layoutWidget);
         horizontalSliderRed->setObjectName(QString::fromUtf8("horizontalSliderRed"));
         horizontalSliderRed->setMaximum(255);
+        horizontalSliderRed->setValue(48);
         horizontalSliderRed->setOrientation(Qt::Horizontal);
 
         gridLayout->addWidget(horizontalSliderRed, 1, 1, 1, 1);
 
-        horizontalSliderBlue = new QSlider(widget);
-        horizontalSliderBlue->setObjectName(QString::fromUtf8("horizontalSliderBlue"));
-        horizontalSliderBlue->setMaximum(255);
-        horizontalSliderBlue->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalSliderBlue, 2, 1, 1, 1);
-
-        lcdNumber_2 = new QLCDNumber(widget);
+        lcdNumber_2 = new QLCDNumber(layoutWidget);
         lcdNumber_2->setObjectName(QString::fromUtf8("lcdNumber_2"));
+        lcdNumber_2->setFrameShape(QFrame::Panel);
+        lcdNumber_2->setFrameShadow(QFrame::Sunken);
+        lcdNumber_2->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber_2->setProperty("intValue", QVariant(48));
 
         gridLayout->addWidget(lcdNumber_2, 2, 2, 1, 1);
 
-        horizontalSliderGreen = new QSlider(widget);
+        horizontalSliderGreen = new QSlider(layoutWidget);
         horizontalSliderGreen->setObjectName(QString::fromUtf8("horizontalSliderGreen"));
         horizontalSliderGreen->setMaximum(255);
+        horizontalSliderGreen->setValue(48);
         horizontalSliderGreen->setOrientation(Qt::Horizontal);
 
         gridLayout->addWidget(horizontalSliderGreen, 3, 1, 1, 1);
 
-        labelBlue = new QLabel(widget);
+        labelBlue = new QLabel(layoutWidget);
         labelBlue->setObjectName(QString::fromUtf8("labelBlue"));
 
         gridLayout->addWidget(labelBlue, 2, 0, 1, 1);
 
-        labelGreen = new QLabel(widget);
+        labelGreen = new QLabel(layoutWidget);
         labelGreen->setObjectName(QString::fromUtf8("labelGreen"));
 
         gridLayout->addWidget(labelGreen, 3, 0, 1, 1);
 
-        labelAlpha = new QLabel(widget);
+        labelAlpha = new QLabel(layoutWidget);
         labelAlpha->setObjectName(QString::fromUtf8("labelAlpha"));
 
         gridLayout->addWidget(labelAlpha, 4, 0, 1, 1);
 
-        horizontalSliderAlpha = new QSlider(widget);
+        horizontalSliderAlpha = new QSlider(layoutWidget);
         horizontalSliderAlpha->setObjectName(QString::fromUtf8("horizontalSliderAlpha"));
         horizontalSliderAlpha->setMaximum(100);
+        horizontalSliderAlpha->setValue(100);
         horizontalSliderAlpha->setOrientation(Qt::Horizontal);
 
         gridLayout->addWidget(horizontalSliderAlpha, 4, 1, 1, 1);
 
-        lcdNumber_4 = new QLCDNumber(widget);
+        lcdNumber_4 = new QLCDNumber(layoutWidget);
         lcdNumber_4->setObjectName(QString::fromUtf8("lcdNumber_4"));
+        lcdNumber_4->setFrameShape(QFrame::Panel);
+        lcdNumber_4->setFrameShadow(QFrame::Sunken);
+        lcdNumber_4->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber_4->setProperty("intValue", QVariant(100));
 
         gridLayout->addWidget(lcdNumber_4, 4, 2, 1, 1);
 
-        labelRed = new QLabel(widget);
+        labelRed = new QLabel(layoutWidget);
         labelRed->setObjectName(QString::fromUtf8("labelRed"));
 
         gridLayout->addWidget(labelRed, 1, 0, 1, 1);
 
-        widget1 = new QWidget(widget);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
+        horizontalSliderBlue = new QSlider(layoutWidget);
+        horizontalSliderBlue->setObjectName(QString::fromUtf8("horizontalSliderBlue"));
+        horizontalSliderBlue->setMaximum(255);
+        horizontalSliderBlue->setValue(48);
+        horizontalSliderBlue->setOrientation(Qt::Horizontal);
 
-        gridLayout->addWidget(widget1, 0, 0, 1, 3);
+        gridLayout->addWidget(horizontalSliderBlue, 2, 1, 1, 1);
+
+        widget = new Paleta(layoutWidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setMinimumSize(QSize(0, 50));
+
+        gridLayout->addWidget(widget, 0, 0, 1, 3);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);

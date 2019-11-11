@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //connect(ui->horizontalSliderBlue, &QSlider::valueChanged, ui->lcdNumber_2, &QLCDNumber::display);
-    connect(ui->actionGitHub, &QAction::triggered, this, gitHub);
+    //connect(ui->actionGitHub, &QAction::triggered, this, gitHub);
 }
 
 MainWindow::~MainWindow()
