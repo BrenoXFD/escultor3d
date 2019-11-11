@@ -7,9 +7,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //connect(ui->horizontalSliderBlue, &QSlider::valueChanged, ui->lcdNumber_2, &QLCDNumber::display);
+    connect(ui->actionGitHub, &QAction::triggered, this, gitHub);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::gitHub(){
+    QUrl url("http://github.com/BrenoXFD/escultor3d");
+    QDesktopServices::openUrl(url);
 }

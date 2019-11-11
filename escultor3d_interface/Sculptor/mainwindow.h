@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QUrl>
+#include <QDesktopServices>
 
 namespace Ui {
 class MainWindow;
@@ -16,7 +18,7 @@ public:
     ~MainWindow();
 
 public slots:
-
+    void gitHub();
 private:
     Ui::MainWindow *ui;
 };

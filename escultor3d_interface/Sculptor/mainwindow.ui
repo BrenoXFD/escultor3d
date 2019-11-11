@@ -18,7 +18,7 @@
     <normaloff>:/icons/icons/logo.png</normaloff>:/icons/icons/logo.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -28,11 +28,34 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" colspan="3">
+      <widget class="QWidget" name="widget" native="true"/>
+     </item>
      <item row="1" column="2">
-      <widget class="QLCDNumber" name="lcdNumber"/>
+      <widget class="QLCDNumber" name="lcdNumber">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
      </item>
      <item row="3" column="2">
-      <widget class="QLCDNumber" name="lcdNumber_3"/>
+      <widget class="QLCDNumber" name="lcdNumber_3">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
       <widget class="QSlider" name="horizontalSliderRed">
@@ -44,18 +67,18 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QSlider" name="horizontalSliderBlue">
-       <property name="maximum">
-        <number>255</number>
+     <item row="2" column="2">
+      <widget class="QLCDNumber" name="lcdNumber_2">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLCDNumber" name="lcdNumber_2"/>
      </item>
      <item row="3" column="1">
       <widget class="QSlider" name="horizontalSliderGreen">
@@ -99,7 +122,17 @@
       </widget>
      </item>
      <item row="4" column="2">
-      <widget class="QLCDNumber" name="lcdNumber_4"/>
+      <widget class="QLCDNumber" name="lcdNumber_4">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="labelRed">
@@ -108,8 +141,15 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0" colspan="3">
-      <widget class="QWidget" name="widget" native="true"/>
+     <item row="2" column="1">
+      <widget class="QSlider" name="horizontalSliderBlue">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -120,7 +160,7 @@
      <x>0</x>
      <y>0</y>
      <width>1073</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
