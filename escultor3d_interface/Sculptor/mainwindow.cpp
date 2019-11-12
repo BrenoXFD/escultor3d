@@ -6,8 +6,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //connect(ui->horizontalSliderBlue, &QSlider::valueChanged, ui->lcdNumber_2, &QLCDNumber::display);
-    //connect(ui->actionGitHub, &QAction::triggered, this, gitHub);
+    connect(ui->actionGitHub, &QAction::triggered, this, &MainWindow::gitHub);
+    connect(ui->horizontalSliderRed, &QAbstractSlider::valueChanged, ui->widget, &Paleta::setPaletaRed);
+    connect(ui->horizontalSliderBlue, &QAbstractSlider::valueChanged, ui->widget, &Paleta::setPaletaBlue);
+    connect(ui->horizontalSliderGreen, &QAbstractSlider::valueChanged, ui->widget, &Paleta::setPaletaGreen);
+    connect(ui->horizontalSliderAlpha, &QAbstractSlider::valueChanged, ui->widget, &Paleta::setPaletaAlpha);
 }
 
 MainWindow::~MainWindow()

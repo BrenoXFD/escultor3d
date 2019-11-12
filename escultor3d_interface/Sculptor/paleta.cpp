@@ -13,14 +13,34 @@ void Paleta::paintEvent(QPaintEvent *event){
     QBrush brush;
     QPen pen;
 
-    brush.setColor(QColor(48,48,48));
+    brush.setColor(QColor(red, blue, green, alpha));
     brush.setStyle(Qt::SolidPattern);
 
-    pen.setColor(QColor(204,255,255));
+    pen.setColor(QColor(255,255,255));
     pen.setWidth(2);
 
     painter.setBrush(brush);
     painter.setPen(pen);
 
     painter.drawRect(0,0,width(),height());
+}
+
+void Paleta::setPaletaRed(int _red){
+    red = _red;
+    repaint();
+}
+
+void Paleta::setPaletaBlue(int _blue){
+    blue = _blue;
+    repaint();
+}
+
+void Paleta::setPaletaGreen(int _green){
+    green = _green;
+    repaint();
+}
+
+void Paleta::setPaletaAlpha(int _alpha){
+    alpha = _alpha;
+    repaint();
 }
