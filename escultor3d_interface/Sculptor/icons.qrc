@@ -11,5 +11,15 @@
         <file>icons/eixo-x.png</file>
         <file>icons/eixo-y.png</file>
         <file>icons/eixo-z.png</file>
+        <file>icons/cutBox.png</file>
+        <file>icons/cutEllipsoid.png</file>
+        <file>icons/cutSphere.png</file>
+        <file>icons/cutVoxel.png</file>
+        <file>icons/putBox.png</file>
+        <file>icons/putEllipsoid.png</file>
+        <file>icons/putSphere.png</file>
+        <file>icons/putVoxel.png</file>
+        <file>icons/sharp.png</file>
+        <file>icons/object.png</file>
     </qresource>
 </RCC>
