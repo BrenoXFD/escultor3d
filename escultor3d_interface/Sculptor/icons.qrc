@@ -8,5 +8,8 @@
         <file>icons/logo.png</file>
         <file>icons/share.png</file>
         <file>icons/open-archive.png</file>
+        <file>icons/eixo-x.png</file>
+        <file>icons/eixo-y.png</file>
+        <file>icons/eixo-z.png</file>
     </qresource>
 </RCC>

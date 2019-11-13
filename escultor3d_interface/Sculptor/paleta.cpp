@@ -3,9 +3,11 @@
 #include <QBrush>
 #include <QPen>
 
-Paleta::Paleta(QWidget *parent) : QWidget(parent)
-{
-
+Paleta::Paleta(QWidget *parent) : QWidget(parent){
+    red = 48;
+    blue = 48;
+    green = 48;
+    alpha = 255;
 }
 
 void Paleta::paintEvent(QPaintEvent *event){
@@ -13,7 +15,7 @@ void Paleta::paintEvent(QPaintEvent *event){
     QBrush brush;
     QPen pen;
 
-    brush.setColor(QColor(red, blue, green, alpha));
+    brush.setColor(QColor(red, green, blue, alpha));
     brush.setStyle(Qt::SolidPattern);
 
     pen.setColor(QColor(255,255,255));

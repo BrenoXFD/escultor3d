@@ -7,7 +7,7 @@ class Paleta : public QWidget
 {
     Q_OBJECT
 private:
-    int red = 48; int blue = 48; int green = 48; int alpha = 255;
+    int red, blue, green, alpha;
 public:
     explicit Paleta(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
