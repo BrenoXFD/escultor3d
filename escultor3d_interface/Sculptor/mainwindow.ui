@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>998</width>
-    <height>647</height>
+    <width>1278</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>730</x>
-      <y>10</y>
+      <x>950</x>
+      <y>20</y>
       <width>251</width>
       <height>218</height>
      </rect>
@@ -193,27 +193,27 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>0</x>
       <y>10</y>
       <width>326</width>
       <height>260</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="0">
-      <widget class="QGroupBox" name="groupBox">
+     <item row="2" column="0">
+      <widget class="QGroupBox" name="groupBox_3">
        <property name="title">
-        <string>&lt;Y,Z&gt;</string>
+        <string>&lt;X,Y&gt;</string>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="pushButton_3">
           <property name="text">
            <string/>
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/icons/icons/eixo-x.png</normaloff>:/icons/icons/eixo-x.png</iconset>
+            <normaloff>:/icons/icons/eixo-z.png</normaloff>:/icons/icons/eixo-z.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -227,7 +227,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSlider" name="horizontalSliderEixoX">
+         <widget class="QSlider" name="horizontalSliderEixoZ">
           <property name="maximum">
            <number>255</number>
           </property>
@@ -237,7 +237,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLCDNumber" name="lcdNumber_5"/>
+         <widget class="QLCDNumber" name="lcdNumber_7"/>
         </item>
        </layout>
       </widget>
@@ -284,20 +284,20 @@
        </layout>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QGroupBox" name="groupBox_3">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>&lt;X,Y&gt;</string>
+        <string>&lt;Y,Z&gt;</string>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="pushButton">
           <property name="text">
            <string/>
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/icons/icons/eixo-z.png</normaloff>:/icons/icons/eixo-z.png</iconset>
+            <normaloff>:/icons/icons/eixo-x.png</normaloff>:/icons/icons/eixo-x.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -311,7 +311,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSlider" name="horizontalSliderEixoZ">
+         <widget class="QSlider" name="horizontalSliderEixoX">
           <property name="maximum">
            <number>255</number>
           </property>
@@ -321,18 +321,18 @@
          </widget>
         </item>
         <item>
-         <widget class="QLCDNumber" name="lcdNumber_7"/>
+         <widget class="QLCDNumber" name="lcdNumber_5"/>
         </item>
        </layout>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>500</y>
+      <x>370</x>
+      <y>570</y>
       <width>460</width>
       <height>50</height>
      </rect>
@@ -500,13 +500,51 @@
      </item>
     </layout>
    </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>550</width>
+      <height>550</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>&lt;Y,Z&gt;</string>
+     </attribute>
+     <widget class="Yz" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>512</width>
+        <height>512</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>&lt;Z,X&gt;</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>&lt;X,Y&gt;</string>
+     </attribute>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>998</width>
+     <width>1278</width>
      <height>21</height>
     </rect>
    </property>
@@ -654,6 +692,12 @@
    <slots>
     <slot>setPaletaRed(int)</slot>
    </slots>
+  </customwidget>
+  <customwidget>
+   <class>Yz</class>
+   <extends>QWidget</extends>
+   <header>yz.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

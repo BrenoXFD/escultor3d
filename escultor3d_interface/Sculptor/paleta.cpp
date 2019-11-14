@@ -18,7 +18,7 @@ void Paleta::paintEvent(QPaintEvent *event){
     brush.setColor(QColor(red, green, blue, alpha));
     brush.setStyle(Qt::SolidPattern);
 
-    pen.setColor(QColor(255,255,255));
+    pen.setColor(QColor(238,82,61));
     pen.setWidth(2);
 
     painter.setBrush(brush);

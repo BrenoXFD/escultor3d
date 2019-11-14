@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    paleta.cpp
+    paleta.cpp \
+    yz.cpp
 
 HEADERS += \
         mainwindow.h \
-    paleta.h
+    paleta.h \
+    yz.h
 
 FORMS += \
         mainwindow.ui
