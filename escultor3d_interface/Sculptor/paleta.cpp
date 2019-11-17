@@ -15,16 +15,18 @@ void Paleta::paintEvent(QPaintEvent *event){
     QBrush brush;
     QPen pen;
 
+    painter.setRenderHint(QPainter::Antialiasing);
+
     brush.setColor(QColor(red, green, blue, alpha));
     brush.setStyle(Qt::SolidPattern);
 
-    pen.setColor(QColor(238,82,61));
-    pen.setWidth(2);
+    pen.setColor(QColor(255,255,255));
+    pen.setWidth(3);
 
     painter.setBrush(brush);
     painter.setPen(pen);
 
-    painter.drawRect(0,0,width(),height());
+    painter.drawRoundedRect(0,0,width(),height(),20.0,20.0);
 }
 
 void Paleta::setPaletaRed(int _red){

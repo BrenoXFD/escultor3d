@@ -1,13 +1,13 @@
-#include "yz.h"
+#include "xy.h"
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
 
-Yz::Yz(QWidget *parent) : QWidget(parent){
+Xy::Xy(QWidget *parent) : QWidget(parent){
 
 }
 
-void Yz::paintEvent(QPaintEvent *event){
+void Xy::paintEvent(QPaintEvent *event){
     QPainter painter(this);
     QBrush brush;
     QPen pen;

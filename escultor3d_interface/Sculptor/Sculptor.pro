@@ -27,12 +27,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     paleta.cpp \
-    yz.cpp
+    xy.cpp \
+    yz.cpp \
+    zx.cpp
 
 HEADERS += \
         mainwindow.h \
     paleta.h \
-    yz.h
+    xy.h \
+    yz.h \
+    zx.h
 
 FORMS += \
         mainwindow.ui
