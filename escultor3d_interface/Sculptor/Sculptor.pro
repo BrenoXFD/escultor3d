@@ -42,4 +42,5 @@ FORMS += \
         mainwindow.ui
 
 RESOURCES += \
+    doc.qrc \
     icons.qrc

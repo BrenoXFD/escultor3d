@@ -19,6 +19,7 @@ public:
 
 public slots:
     void gitHub();
+    void documentacao();
 private:
     Ui::MainWindow *ui;
 };
