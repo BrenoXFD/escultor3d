@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QUrl>
 #include <QDesktopServices>
+#include "sculptor.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,8 +21,10 @@ public:
 public slots:
     void gitHub();
     void documentacao();
+    void mudarCor();
 private:
     Ui::MainWindow *ui;
+    Sculptor *s;
 };
 
 #endif // MAINWINDOW_H

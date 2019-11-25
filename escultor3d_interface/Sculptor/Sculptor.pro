@@ -29,14 +29,16 @@ SOURCES += \
     paleta.cpp \
     xy.cpp \
     yz.cpp \
-    zx.cpp
+    zx.cpp \
+    sculptor.cpp
 
 HEADERS += \
         mainwindow.h \
     paleta.h \
     xy.h \
     yz.h \
-    zx.h
+    zx.h \
+    sculptor.h
 
 FORMS += \
         mainwindow.ui
