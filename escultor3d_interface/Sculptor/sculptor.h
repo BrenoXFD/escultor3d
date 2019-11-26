@@ -9,10 +9,11 @@ struct Voxel {
 
 class Sculptor {
 protected:
-  Voxel ***v;
+
   int nx,ny,nz;
   float r,g,b,a;
 public:
+    Voxel ***v;
   Sculptor(int nx, int ny, int nz);
   ~Sculptor();
   void setColor(int r, int g, int b, int alpha);

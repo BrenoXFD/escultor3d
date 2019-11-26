@@ -2,6 +2,7 @@
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
+using namespace std;
 
 Yz::Yz(QWidget *parent) : QWidget(parent){
 
@@ -36,7 +37,6 @@ void Yz::paintEvent(QPaintEvent *event){
                     painter.setPen(pen);
                     painter.drawPoint(x,y);
                 }
-
             }
             if(i<16 && j>=16){
                 x = xcenter + ((j-15)*tamanho);

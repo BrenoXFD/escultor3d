@@ -22,6 +22,7 @@ public slots:
     void gitHub();
     void documentacao();
     void mudarCor();
+    void newCanvas();
 private:
     Ui::MainWindow *ui;
     Sculptor *s;

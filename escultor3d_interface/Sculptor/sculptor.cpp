@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <fstream>
+#include "yz.h"
 
 using namespace std;
 

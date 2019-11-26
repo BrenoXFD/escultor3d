@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     s = new Sculptor(32,32,32);
 
     connect(ui->actionGitHub, &QAction::triggered, this, &MainWindow::gitHub);
+    connect(ui->actionNew_Canvas, &QAction::triggered, this, &MainWindow::newCanvas);
 
     connect(ui->horizontalSliderRed, &QAbstractSlider::valueChanged, ui->widget, &Paleta::setPaletaRed);
     connect(ui->horizontalSliderBlue, &QAbstractSlider::valueChanged, ui->widget, &Paleta::setPaletaBlue);
@@ -49,4 +50,9 @@ void MainWindow::mudarCor(){
     a = ui->horizontalSliderAlpha->value();
 
     s->setColor(r,g,b,a);
+}
+
+void MainWindow::newCanvas(){
+    s->~Sculptor();
+    s = new Sculptor(32,32,32);
 }
