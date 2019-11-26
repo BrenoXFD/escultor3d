@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButtonPutEllipsoid, &QPushButton::clicked, this, &MainWindow::canetaPutEllipsoid);
     connect(ui->pushButtonCutEllipsoid, &QPushButton::clicked, this, &MainWindow::canetaCutEllipsoid);
 
+    //connect(ui->widget_2, &Yz::mudouX, this, &MainWindow::desenhar);
 }
 
 MainWindow::~MainWindow()

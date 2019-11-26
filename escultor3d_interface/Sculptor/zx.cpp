@@ -2,6 +2,7 @@
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
+#include <QMouseEvent>
 
 Zx::Zx(QWidget *parent) : QWidget(parent){
     valY = 0;
@@ -81,4 +82,9 @@ void Zx::paintEvent(QPaintEvent *event){
         }
         aux++;
     }
+}
+
+void Zx::mousePressEvent(QMouseEvent *event){
+    emit mudouX(event->x());
+    emit mudouY(event->y());
 }

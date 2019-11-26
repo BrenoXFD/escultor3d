@@ -13,8 +13,10 @@ private:
 public:
     explicit Zx(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
+    void mousePressEvent(QMouseEvent *event);
 signals:
-
+    void mudouX(int);
+    void mudouY(int);
 public slots:
 };
 
