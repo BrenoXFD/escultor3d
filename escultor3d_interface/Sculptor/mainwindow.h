@@ -31,6 +31,15 @@ public slots:
     void setRaioEsfera();
     void setRaio();
     void setEixo();
+    void canetaPutVoxel();
+    void canetaCutVoxel();
+    void canetaPutBox();
+    void canetaCutBox();
+    void canetaPutSphere();
+    void canetaCutSphere();
+    void canetaPutEllipsoid();
+    void canetaCutEllipsoid();
+    void desenhar();
 private:
     Ui::MainWindow *ui;
     Sculptor *s;
@@ -38,6 +47,7 @@ private:
     int raioEsfera;
     int raioX, raioY, raioZ;
     int eixoX, eixoY, eixoZ;
+    int caneta;
 };
 
 #endif // MAINWINDOW_H

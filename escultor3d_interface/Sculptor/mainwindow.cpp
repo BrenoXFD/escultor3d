@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     boxSizeX = 1; boxSizeY = 1; boxSizeZ = 1;
     raioX = 0; raioY = 0; raioZ = 0;
     raioEsfera = 0;
+    caneta = 0;
 
     connect(ui->actionGitHub, &QAction::triggered, this, &MainWindow::gitHub);
     connect(ui->actionNew_Canvas, &QAction::triggered, this, &MainWindow::newCanvas);
@@ -42,6 +43,16 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->horizontalSliderEixoX, &QAbstractSlider::valueChanged, this, &MainWindow::setEixo);
     connect(ui->horizontalSliderEixoY, &QAbstractSlider::valueChanged, this, &MainWindow::setEixo);
     connect(ui->horizontalSliderEixoZ, &QAbstractSlider::valueChanged, this, &MainWindow::setEixo);
+
+    connect(ui->pushButtonPutVoxel, &QPushButton::clicked, this, &MainWindow::canetaPutVoxel);
+    connect(ui->pushButtonCutVoxel, &QPushButton::clicked, this, &MainWindow::canetaCutVoxel);
+    connect(ui->pushButtonPutBox, &QPushButton::clicked, this, &MainWindow::canetaPutBox);
+    connect(ui->pushButtonCutBox, &QPushButton::clicked, this, &MainWindow::canetaCutBox);
+    connect(ui->pushButtonPutSphere, &QPushButton::clicked, this, &MainWindow::canetaPutSphere);
+    connect(ui->pushButtonCutSphere, &QPushButton::clicked, this, &MainWindow::canetaCutSphere);
+    connect(ui->pushButtonPutEllipsoid, &QPushButton::clicked, this, &MainWindow::canetaPutEllipsoid);
+    connect(ui->pushButtonCutEllipsoid, &QPushButton::clicked, this, &MainWindow::canetaCutEllipsoid);
+
 }
 
 MainWindow::~MainWindow()
@@ -55,7 +66,7 @@ void MainWindow::gitHub(){
 }
 
 void MainWindow::documentacao(){
-    QUrl url("http://github.com/BrenoXFD/escultor3d");
+    QUrl url("https://github.com/BrenoXFD/escultor3d/tree/master/Documentação/html");
     QDesktopServices::openUrl(url);
 }
 
@@ -98,4 +109,40 @@ void MainWindow::setEixo(){
     eixoX = ui->horizontalSliderEixoX->value();
     eixoY = ui->horizontalSliderEixoY->value();
     eixoZ = ui->horizontalSliderEixoZ->value();
+}
+
+void MainWindow::canetaPutVoxel(){
+    caneta = 0;
+}
+
+void MainWindow::canetaCutVoxel(){
+    caneta = 1;
+}
+
+void MainWindow::canetaPutBox(){
+    caneta = 2;
+}
+
+void MainWindow::canetaCutBox(){
+    caneta = 3;
+}
+
+void MainWindow::canetaPutSphere(){
+    caneta = 4;
+}
+
+void MainWindow::canetaCutSphere(){
+    caneta = 5;
+}
+
+void MainWindow::canetaPutEllipsoid(){
+    caneta = 6;
+}
+
+void MainWindow::canetaCutEllipsoid(){
+    caneta = 7;
+}
+
+void MainWindow::desenhar(){
+
 }
