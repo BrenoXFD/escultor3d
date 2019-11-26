@@ -5,6 +5,10 @@
 #include <QUrl>
 #include <QDesktopServices>
 #include "sculptor.h"
+#include "yz.h"
+#include "xy.h"
+#include "zx.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -23,9 +27,17 @@ public slots:
     void documentacao();
     void mudarCor();
     void newCanvas();
+    void setSizeBox();
+    void setRaioEsfera();
+    void setRaio();
+    void setEixo();
 private:
     Ui::MainWindow *ui;
     Sculptor *s;
+    int boxSizeX, boxSizeY, boxSizeZ;
+    int raioEsfera;
+    int raioX, raioY, raioZ;
+    int eixoX, eixoY, eixoZ;
 };
 
 #endif // MAINWINDOW_H

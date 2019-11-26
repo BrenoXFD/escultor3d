@@ -2,10 +2,9 @@
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
-using namespace std;
 
 Yz::Yz(QWidget *parent) : QWidget(parent){
-
+    valX = 0;
 }
 
 void Yz::paintEvent(QPaintEvent *event){

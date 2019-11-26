@@ -4,7 +4,7 @@
 #include <QPen>
 
 Zx::Zx(QWidget *parent) : QWidget(parent){
-
+    valY = 0;
 }
 
 void Zx::paintEvent(QPaintEvent *event){

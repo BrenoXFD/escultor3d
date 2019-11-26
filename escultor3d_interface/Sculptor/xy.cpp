@@ -4,7 +4,7 @@
 #include <QPen>
 
 Xy::Xy(QWidget *parent) : QWidget(parent){
-
+    valZ = 0;
 }
 
 void Xy::paintEvent(QPaintEvent *event){
