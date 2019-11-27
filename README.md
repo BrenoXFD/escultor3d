@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/ckXQLCA.png" width="500px;">
   </p>
   <br>
-  The Sculptor have 8 main funcionalities:
+  The Sculptor have 8 main functions:
  <br>
  <ul>
    <li><b>Put Voxel</b>: Paint a small cube, at the size of 1x1 in the main canvas.</li> 
