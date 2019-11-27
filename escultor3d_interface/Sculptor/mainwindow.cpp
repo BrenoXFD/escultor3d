@@ -159,12 +159,43 @@ void MainWindow::planoXY(int x, int y){
 }
 
 void MainWindow::desenhar(int x, int y, int plano){
-    int minX, minY, maxX, maxY;
-    if(x>=minX && x<=maxX && y>=minY && y<=maxY){
+    int minX, minY, maxX, maxY, xCenter, yCenter, tamanho;
+    int i=0,j=0,k=0;
+    bool dentro;
+
+    tamanho = ui->widget_2->height();
+    tamanho = tamanho/32;
+    xCenter = ui->widget_2->width();
+    xCenter = xCenter/2;
+    yCenter = ui->widget_2->height();
+    yCenter = yCenter/2;
+
+    minX = (xCenter) - (tamanho*16);
+    maxX = (xCenter) + (tamanho*16);
+    minY = (yCenter) - (tamanho*16);
+    maxY = (yCenter) + (tamanho*16);
+
+    //Converter x e y em posição da matriz baseado nesses centros
+
+    if(dentro){
         switch (caneta) {
             case 0:
+                if(0){
+                    s->putVoxel(eixoX,j,k);
+                }else if(1){
+                    s->putVoxel(i,eixoY,j);
+                }else{
+                    s->putVoxel(i,j,eixoZ);
+                }
                 break;
             case 1:
+                if(0){
+                    s->cutVoxel(eixoX,j,k);
+                }else if(1){
+                    s->cutVoxel(i,eixoY,j);
+                }else{
+                    s->cutVoxel(i,j,eixoZ);
+                }
                 break;
             case 2:
                 break;
