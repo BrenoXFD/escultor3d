@@ -1,5 +1,3 @@
-# escultor3d
-
 # Sculptor drawer
   A sculptor that draws geometric figures in individual voxels (3d Pixels) and imports the figure to a .off or .vect format, readeable by geomview or meshlab. The image above shows the main window of the software. The square in the middle-left is the main matrix, known as our canvas. You can draw anything that you could imagine with it, painting small cubes in the combination of collors that you want.
   <br>
