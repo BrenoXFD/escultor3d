@@ -4,7 +4,7 @@
   A sculptor that draws geometric figures in individual voxels (3d Pixels) and imports the figure to a .off or .vect format, readeable by geomview or meshlab. The image above shows the main window of the software. The square in the middle-left is the main matrix, known as our canvas. You can draw anything that you could imagine with it, painting small cubes in the combination of collors that you want.
   <br>
   <p align="center">
-  <img src="https://user-images.githubusercontent.com/31252524/59954220-05654080-945a-11e9-87ad-d1d1bcd4074c.png" width="500px;">
+  <img src="" width="500px;">
   </p>
   <br>
   The Sculptor have 8 main funcionalities:
