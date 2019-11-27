@@ -53,7 +53,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButtonPutEllipsoid, &QPushButton::clicked, this, &MainWindow::canetaPutEllipsoid);
     connect(ui->pushButtonCutEllipsoid, &QPushButton::clicked, this, &MainWindow::canetaCutEllipsoid);
 
-    //connect(ui->widget_2, &Yz::mudouX, this, &MainWindow::desenhar);
+    connect(ui->widget_2, &Yz::mudouXY, this, &MainWindow::planoYZ);
+    connect(ui->widget_3, &Zx::mudouXY, this, &MainWindow::planoZX);
+    connect(ui->widget_4, &Xy::mudouXY, this, &MainWindow::planoXY);
 }
 
 MainWindow::~MainWindow()
@@ -144,6 +146,39 @@ void MainWindow::canetaCutEllipsoid(){
     caneta = 7;
 }
 
-void MainWindow::desenhar(){
+void MainWindow::planoYZ(int x, int y){
+    desenhar(x,y,0);
+}
 
+void MainWindow::planoZX(int x, int y){
+    desenhar(x,y,1);
+}
+
+void MainWindow::planoXY(int x, int y){
+    desenhar(x,y,2);
+}
+
+void MainWindow::desenhar(int x, int y, int plano){
+    int minX, minY, maxX, maxY;
+    if(x>=minX && x<=maxX && y>=minY && y<=maxY){
+        switch (caneta) {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+
+        }
+    }
 }

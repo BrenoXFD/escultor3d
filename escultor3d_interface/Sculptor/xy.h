@@ -15,8 +15,7 @@ public:
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
 signals:
-    void mudouX(int);
-    void mudouY(int);
+    void mudouXY(int,int);
 public slots:
 };
 

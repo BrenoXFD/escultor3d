@@ -85,6 +85,5 @@ void Xy::paintEvent(QPaintEvent *event){
 }
 
 void Xy::mousePressEvent(QMouseEvent *event){
-    emit mudouX(event->x());
-    emit mudouY(event->y());
+    emit mudouXY(event->x(),event->y());
 }

@@ -39,7 +39,10 @@ public slots:
     void canetaCutSphere();
     void canetaPutEllipsoid();
     void canetaCutEllipsoid();
-    void desenhar();
+    void planoYZ(int x, int y);
+    void planoZX(int x, int y);
+    void planoXY(int x, int y);
+    void desenhar(int x, int y, int plano);
 private:
     Ui::MainWindow *ui;
     Sculptor *s;
